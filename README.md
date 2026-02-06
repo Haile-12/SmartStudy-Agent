@@ -130,8 +130,6 @@ Create a `.env` file in the `backend/` directory with your API key:
 ```ini
 # backend/.env
 GOOGLE_API_KEY=AIzaSy...YourKeyHere
-CREWAI_TRACING_ENABLED=false
-OUTPUT_DIR=./outputs
 ```
 
 ### 4. Running the Application
