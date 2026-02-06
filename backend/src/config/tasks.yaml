@@ -1,0 +1,84 @@
+summarization_task:
+  description: >
+    Summarize these study materials about {topic} into high-yield exam content:
+    {notes}
+    Requirements:
+    - Extract key concepts, definitions, formulas
+    - Highlight exam-critical information
+    - Organize by priority: High/Medium/Low yield
+    - Keep under 600 words
+    - Use clear headings and bullet points
+    - Format as markdown
+    - START OUTPUT WITH HEADER: "# High-Yield Content Analysis"
+  expected_output: "A concise markdown summary of the study materials with clear heads for High/Medium/Low yield content."
+
+planning_task:
+  description: >
+    Create a 7-day study plan for: {topic}
+    Student materials: {notes}
+    Requirements:
+    - Daily sessions: 60-90 minutes
+    - Prioritize high-yield exam topics first
+    - Include spaced repetition schedule
+    - Balance new content with review
+    - Flag topics needing extra focus
+    - Format as a markdown table with columns: Day | Topics | Time | Priority
+    - START OUTPUT WITH HEADER: "# Optimized Roadmap"
+    Output rules (STRICT):
+    - Output ONLY the markdown table.
+    - No introduction. No explanation.
+    - Time in minutes only (e.g., '60-90 min').
+    - Header must be: | Day | Topics | Time | Priority |
+  expected_output: "A markdown table representing a 7-day study schedule."
+
+resource_finding_task:
+  description: >
+    Find supplementary learning resources for {topic} targeting weak areas.
+    Requirements:
+    - Prioritize free, credible resources (university sites, arXiv)
+    - Include mix: video lectures, practice problems
+    - Provide direct URLs and 1-sentence descriptions
+    - Limit to 3-5 highest-quality resources
+    - Format as markdown list with links
+    - START OUTPUT WITH HEADER: "# External Resource Vault"
+  expected_output: "A markdown list of 3-5 high-quality external resources with descriptions and links."
+
+quiz_generation_task:
+  description: >
+    Generate 5 practice questions for {topic} based on materials.
+    Requirements:
+    - Mix types: multiple choice, short answer
+    - Focus on common misconceptions
+    - Include detailed answer explanations
+    - Flag high-yield exam topics
+    - Difficulty: Medium to challenging
+    - Format as numbered list with answers separated
+    - START OUTPUT WITH HEADER: "# Active Recall Assessment"
+  expected_output: "A list of 5 practice questions with an answer key and explanations."
+
+progress_analysis_task:
+  description: >
+    Analyze learning progress for {topic} based on current plan and complexity.
+    Requirements:
+    - Assign confidence scores (0-100%) to 3-5 key subtopics
+    - Identify specific knowledge gaps
+    - Recommend 2-3 targeted actions for improvement
+    - Suggest optimal next study focus
+    - Format as bullet points with clear metrics
+    - START OUTPUT WITH HEADER: "# Performance Forecasting"
+  expected_output: "A progress report with confidence scores and actionable recommendations."
+
+report_compilation_task:
+  description: >
+     Compile a Master Study Guide for {topic} by aggregation of ALL previous task outputs.
+     Requirements:
+     - Combine the outputs from the Note Summarizer, Study Scheduler, Resource Finder, Quiz Generator, and Progress Tracker.
+     - STRICTLY MAINTAIN separate sections with the headers:
+       1. "# High-Yield Content Analysis"
+       2. "# Optimized Roadmap"
+       3. "# Active Recall Assessment"
+       4. "# External Resource Vault"
+       5. "# Performance Forecasting"
+     - Do not summarize or cut content; preserve the detail from the previous agents.
+     - Ensure the final output is a single, cohesive Markdown document.
+  expected_output: "A comprehensive Markdown document containing the summary, schedule, quiz, resources, and progress tracking sections."
