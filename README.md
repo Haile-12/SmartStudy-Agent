@@ -1,5 +1,4 @@
-# 🎓 SmartStudy Agent (Nexus AI Hub)
-
+# 🎓 SmartStudy Agent 
 ![Version](https://img.shields.io/badge/version-1.1.0-blue.svg?style=flat-square) 
 ![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square) 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg?style=flat-square) 
