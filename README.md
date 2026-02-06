@@ -194,4 +194,11 @@ Simply open the `frontend/index.html` file in your preferred web browser (Chrome
 This project is licensed under the MIT License. You are free to use, modify, and distribute it.
 
 ---
+
+---
+## 🧪 Output Testimonials
+
+![Output 1](image1.png)
+![Output 2](image2.png)
+---
 *Built with ❤️ by Haile Tassew.*
